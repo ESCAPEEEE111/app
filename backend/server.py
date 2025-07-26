@@ -613,7 +613,7 @@ async def get_analytics_summary():
         
         # Get today's analytics
         today = date.today()
-        today_analytics = await db.analytics.find_one({"date": today})
+        today_analytics = await db.analytics.find_one({"analytics_date": today})
         
         # Get total counts
         total_contacts = await db.contact_forms.count_documents({})
