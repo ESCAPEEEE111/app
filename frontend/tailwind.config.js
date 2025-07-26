@@ -117,11 +117,12 @@ module.exports = {
   				}
   			}
   		},
-  		backgroundImage: {
-  			'matrix-grid': 'linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px)',
-  		},
   		backgroundSize: {
   			'matrix-grid': '20px 20px',
+  		},
+  		backgroundImage: {
+  			'matrix-grid': 'linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px)',
+  			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   		},
   		boxShadow: {
   			'matrix': '0 0 20px rgba(0, 255, 65, 0.3)',
