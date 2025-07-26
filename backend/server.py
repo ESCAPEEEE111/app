@@ -511,7 +511,7 @@ async def create_booking(
         
         # Track analytics
         await db.analytics.update_one(
-            {"date": date.today()},
+            {"analytics_date": date.today()},
             {"$inc": {"bookings": 1}},
             upsert=True
         )
