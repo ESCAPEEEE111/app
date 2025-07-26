@@ -74,7 +74,7 @@ class AnalyticsMiddleware(BaseHTTPMiddleware):
             
             # Update or create today's analytics
             await db.analytics.update_one(
-                {"date": today},
+                {"analytics_date": today},
                 {"$inc": {"page_views": 1}},
                 upsert=True
             )
