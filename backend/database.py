@@ -74,7 +74,7 @@ async def create_indexes():
         await db.db.testimonials.create_index("rating")
         
         # Analytics indexes
-        await db.db.analytics.create_index("date", unique=True)
+        await db.db.analytics.create_index("analytics_date", unique=True)
         
         logger.info("Database indexes created successfully")
         
