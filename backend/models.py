@@ -264,7 +264,7 @@ class Analytics(BaseDocument):
     contact_forms: int = 0
     bookings: int = 0
     chat_sessions: int = 0
-    date: date = Field(default_factory=date.today)
+    analytics_date: date = Field(default_factory=date.today)
 
 # Email Templates
 class EmailTemplate(BaseDocument):
