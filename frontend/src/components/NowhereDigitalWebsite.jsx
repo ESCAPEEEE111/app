@@ -172,11 +172,11 @@ const NowhereDigitalWebsite = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-mono">
-                <span className="text-matrix-green animate-pulse">
+                <span className="text-matrix-green animate-pulse matrix-text-glow">
                   DIGITAL
                 </span>
                 <br />
-                <span className="text-white">SUPREMACY</span>
+                <span className="text-white matrix-flicker">SUPREMACY</span>
               </h1>
               
               <TerminalWindow title="MISSION_BRIEFING.txt" className="mb-8">
