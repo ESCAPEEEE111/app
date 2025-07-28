@@ -462,6 +462,7 @@ export const services = [
 ];
 
 export const specializedServices = [
+  {
     id: 13,
     icon: "Smartphone",
     title: "Web & App Development",
