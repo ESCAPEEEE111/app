@@ -482,10 +482,7 @@ export const specializedServices = [
     title: "AI Agents Integration",
     description: "Custom AI agents and chatbots for business automation",
     features: ["Custom AI Agents", "Chatbot Development", "Process Automation", "AI Customer Support"]
-  }
-];
-
-export const specializedServices = [
+  },
   { id: 1, icon: "Plane", title: "Tourism & Hospitality", description: "Destination marketing for hotels and travel experiences" },
   { id: 2, icon: "Building", title: "Real Estate Marketing", description: "Property listings and virtual tour experiences" },
   { id: 3, icon: "Heart", title: "Healthcare Marketing", description: "Medical tourism and wellness brand promotion" },
