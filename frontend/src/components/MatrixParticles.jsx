@@ -94,9 +94,9 @@ const MatrixParticles = ({ className = "", particleCount = 100 }) => {
           this.x, this.y, 0,
           this.x, this.y, glowSize
         );
-        gradient.addColorStop(0, `rgba(0, 255, 65, ${this.opacity * 0.8})`);
-        gradient.addColorStop(0.5, `rgba(0, 255, 65, ${this.opacity * 0.4})`);
-        gradient.addColorStop(1, 'rgba(0, 255, 65, 0)');
+        gradient.addColorStop(0, `rgba(0, 255, 255, ${this.opacity * 0.8})`);
+        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${this.opacity * 0.4})`);
+        gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
         
         ctx.fillStyle = gradient;
         ctx.fillRect(
