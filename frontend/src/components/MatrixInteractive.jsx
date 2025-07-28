@@ -65,9 +65,9 @@ const MatrixInteractive = ({ className = "" }) => {
       draw(ctx) {
         this.particles.forEach(particle => {
           ctx.save();
-          ctx.fillStyle = `rgba(0, 255, 65, ${particle.opacity})`;
+          ctx.fillStyle = `rgba(0, 255, 255, ${particle.opacity})`;
           ctx.font = `${particle.size * 4}px 'JetBrains Mono', monospace`;
-          ctx.shadowColor = '#00FF41';
+          ctx.shadowColor = '#00FFFF';
           ctx.shadowBlur = 8;
           ctx.fillText(particle.char, particle.x, particle.y);
           ctx.restore();
