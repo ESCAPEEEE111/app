@@ -171,8 +171,8 @@ const MatrixChatSystem = ({ className = "" }) => {
         <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
           <Button
             onClick={() => setIsOpen(true)}
-            className="w-16 h-16 rounded-full bg-matrix-green text-black hover:bg-matrix-green/80 shadow-matrix-lg animate-pulse"
-            style={{ boxShadow: '0 0 20px rgba(0, 255, 65, 0.5)' }}
+            className="w-16 h-16 rounded-full bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan text-black hover:from-matrix-bright-cyan hover:to-matrix-teal shadow-matrix-lg animate-pulse"
+            style={{ boxShadow: '0 0 20px rgba(0, 255, 255, 0.5)' }}
           >
             <MessageCircle className="w-8 h-8" />
           </Button>
