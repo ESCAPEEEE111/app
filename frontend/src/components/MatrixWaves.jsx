@@ -58,7 +58,7 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
 
     // Digital grid lines
     const drawDigitalGrid = () => {
-      ctx.strokeStyle = 'rgba(0, 255, 65, 0.05)';
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
       ctx.lineWidth = 1;
       
       const gridSize = 50;
