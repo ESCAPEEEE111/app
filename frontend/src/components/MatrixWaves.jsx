@@ -150,9 +150,9 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
         ctx.save();
         
         // Set wave properties
-        ctx.strokeStyle = `rgba(0, 255, 65, ${wave.opacity})`;
+        ctx.strokeStyle = `rgba(0, 255, 255, ${wave.opacity})`;
         ctx.lineWidth = wave.strokeWidth;
-        ctx.shadowColor = '#00FF41';
+        ctx.shadowColor = '#00FFFF';
         ctx.shadowBlur = 5;
         
         // Calculate wave positions
