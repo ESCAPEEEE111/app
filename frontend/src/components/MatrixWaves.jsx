@@ -188,14 +188,14 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
             x, particleY, 0,
             x, particleY, 10
           );
-          particleGradient.addColorStop(0, `rgba(0, 255, 65, ${wave.opacity + 0.2})`);
-          particleGradient.addColorStop(1, 'rgba(0, 255, 65, 0)');
+          particleGradient.addColorStop(0, `rgba(0, 255, 255, ${wave.opacity + 0.2})`);
+          particleGradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
           
           ctx.fillStyle = particleGradient;
           ctx.fillRect(x - 10, particleY - 10, 20, 20);
           
           // Particle core
-          ctx.fillStyle = `rgba(0, 255, 65, ${wave.opacity + 0.4})`;
+          ctx.fillStyle = `rgba(0, 255, 255, ${wave.opacity + 0.4})`;
           ctx.fillRect(x - 2, particleY - 2, 4, 4);
         }
         
