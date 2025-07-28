@@ -110,13 +110,13 @@ const MatrixParticles = ({ className = "", particleCount = 100 }) => {
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
         
-        ctx.fillStyle = `rgba(0, 255, 65, ${this.opacity * pulseMultiplier})`;
+        ctx.fillStyle = `rgba(0, 255, 255, ${this.opacity * pulseMultiplier})`;
         ctx.font = `${this.size * 8}px 'JetBrains Mono', monospace`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         
         // Add shadow for more depth
-        ctx.shadowColor = '#00FF41';
+        ctx.shadowColor = '#00FFFF';
         ctx.shadowBlur = 5;
         ctx.fillText(this.char, 0, 0);
         
