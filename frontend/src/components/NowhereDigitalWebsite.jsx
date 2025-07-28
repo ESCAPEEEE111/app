@@ -8,6 +8,7 @@ import MatrixInteractive from './MatrixInteractive';
 import MatrixChatSystem from './MatrixChatSystem';
 import MatrixAdvancedSections from './MatrixAdvancedSections';
 import AIContentGenerator from './AIContentGenerator';
+import ServicesPricingSection from './ServicesPricingSection';
 import MobileMatrixOptimizer, { MobileMatrixText } from './MobileMatrixOptimizer';
 import TerminalWindow from './TerminalWindow';
 import { Button } from './ui/button';
