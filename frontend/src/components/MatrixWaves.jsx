@@ -95,9 +95,9 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
         
         // Create gradient for data stream
         const gradient = ctx.createLinearGradient(0, streamY - 10, 0, streamY + 10);
-        gradient.addColorStop(0, 'rgba(0, 255, 65, 0)');
-        gradient.addColorStop(0.5, `rgba(0, 255, 65, ${opacity})`);
-        gradient.addColorStop(1, 'rgba(0, 255, 65, 0)');
+        gradient.addColorStop(0, 'rgba(0, 255, 255, 0)');
+        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${opacity})`);
+        gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
         
         ctx.strokeStyle = gradient;
         ctx.lineWidth = 2;
