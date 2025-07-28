@@ -4,6 +4,10 @@ import { services, specializedServices, testimonials, stats, partnerBrands, navi
 import MatrixRain from './MatrixRain';
 import MatrixParticles from './MatrixParticles';
 import MatrixWaves from './MatrixWaves';
+import MatrixInteractive from './MatrixInteractive';
+import MatrixChatSystem from './MatrixChatSystem';
+import MatrixAdvancedSections from './MatrixAdvancedSections';
+import MobileMatrixOptimizer, { MobileMatrixText } from './MobileMatrixOptimizer';
 import TerminalWindow from './TerminalWindow';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
