@@ -81,7 +81,7 @@ const MatrixParticles = ({ className = "", particleCount = 100 }) => {
           const trailOpacity = (index / this.trail.length) * this.opacity;
           const trailSize = this.size * (index / this.trail.length);
           
-          ctx.fillStyle = `rgba(0, 255, 65, ${trailOpacity * 0.3})`;
+          ctx.fillStyle = `rgba(0, 255, 255, ${trailOpacity * 0.3})`;
           ctx.fillRect(point.x - trailSize/2, point.y - trailSize/2, trailSize, trailSize);
         });
 
