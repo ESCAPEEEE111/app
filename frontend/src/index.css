@@ -146,12 +146,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00FF41;
+  background: #00FFFF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00FF00;
+  background: #00E5FF;
 }
 
 /* Additional Matrix Theme Custom Animations */
