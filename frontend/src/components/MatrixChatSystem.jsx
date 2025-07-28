@@ -309,7 +309,7 @@ const MatrixChatSystem = ({ className = "" }) => {
                     </Button>
                   </div>
                   <div className="text-xs text-matrix-green/60 font-mono mt-2">
-                    > Status: {isTyping ? 'AI_PROCESSING...' : 'READY_FOR_INPUT'}
+                    Status: {isTyping ? 'AI_PROCESSING...' : 'READY_FOR_INPUT'}
                   </div>
                 </div>
               </CardContent>
