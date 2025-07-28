@@ -152,8 +152,8 @@ const MatrixRain = ({ className = "", density = 50, interactive = true }) => {
         }
 
         // Set color with opacity
-        const green = Math.floor(255 * opacity);
-        context.fillStyle = `rgb(0, ${green}, 65)`;
+        const cyan = Math.floor(255 * opacity);
+        context.fillStyle = `rgb(0, ${cyan}, 255)`;
         context.font = `${fontSize}px 'JetBrains Mono', monospace`;
 
         // Draw character
