@@ -600,7 +600,10 @@ const NowhereDigitalWebsite = () => {
           </div>
         </div>
       </footer>
-    </div>
+
+      {/* Advanced Features */}
+      <MatrixChatSystem />
+    </MobileMatrixOptimizer>
   );
 };
 
