@@ -183,10 +183,10 @@ code {
 
 @keyframes matrix-pulse-glow {
     0%, 100% {
-        text-shadow: 0 0 5px #00FF41, 0 0 10px #00FF41, 0 0 15px #00FF41;
+        text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00E5FF;
     }
     50% {
-        text-shadow: 0 0 10px #00FF41, 0 0 20px #00FF41, 0 0 30px #00FF41, 0 0 40px #00FF41;
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00E5FF, 0 0 30px #14B8A6, 0 0 40px #00FFFF;
     }
 }
 
