@@ -129,14 +129,14 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
             packetX, packetY, 0,
             packetX, packetY, 15
           );
-          packetGradient.addColorStop(0, `rgba(0, 255, 65, ${opacity})`);
-          packetGradient.addColorStop(1, 'rgba(0, 255, 65, 0)');
+          packetGradient.addColorStop(0, `rgba(0, 255, 255, ${opacity})`);
+          packetGradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
           
           ctx.fillStyle = packetGradient;
           ctx.fillRect(packetX - 15, packetY - 15, 30, 30);
           
           // Packet core
-          ctx.fillStyle = `rgba(0, 255, 65, ${opacity + 0.3})`;
+          ctx.fillStyle = `rgba(0, 255, 255, ${opacity + 0.3})`;
           ctx.fillRect(packetX - 3, packetY - 3, 6, 6);
         }
         
