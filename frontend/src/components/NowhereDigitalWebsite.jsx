@@ -250,6 +250,9 @@ const NowhereDigitalWebsite = () => {
         </div>
       </section>
 
+      {/* Pricing Showcase */}
+      <PricingShowcase />
+
       {/* Services Pricing Section */}
       <ServicesPricingSection />
 
