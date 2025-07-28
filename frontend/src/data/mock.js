@@ -457,47 +457,10 @@ export const services = [
       reporting: ["Real-time", "Daily", "Weekly", "Monthly", "Custom"],
       visualizations: ["Charts", "Graphs", "Heatmaps", "Geographic Maps"],
       includes: ["Dashboard Setup", "Data Integration", "Training", "Support"]
-    }
   }
 ];
-    features: ["AI Chatbots", "Automation", "Predictive Analytics", "Personalization"]
-  },
-  {
-    id: 8,
-    icon: "BarChart3",
-    title: "Marketing Automation",
-    description: "Complete CRM implementation and lead nurturing systems",
-    features: ["HubSpot Setup", "Email Automation", "Lead Scoring", "Journey Mapping"]
-  },
-  {
-    id: 9,
-    icon: "Eye",
-    title: "AR/VR Marketing",
-    description: "Immersive experiences with AR try-ons and virtual showrooms",
-    features: ["AR Experiences", "Virtual Tours", "360° Photography", "VR Events"]
-  },
-  {
-    id: 10,
-    icon: "Shield",
-    title: "Web3 & Blockchain",
-    description: "Future-ready NFT campaigns and cryptocurrency integration",
-    features: ["NFT Marketing", "Crypto Payments", "Blockchain Loyalty", "Metaverse"]
-  },
-  {
-    id: 11,
-    icon: "Volume2",
-    title: "Voice & Audio Marketing",
-    description: "Podcast marketing and voice search optimization",
-    features: ["Podcast Strategy", "Voice SEO", "Audio Ads", "Voice Assistants"]
-  },
-  {
-    id: 12,
-    icon: "Calendar",
-    title: "Event Marketing",
-    description: "Dubai Shopping Festival campaigns and virtual event management",
-    features: ["DSF Campaigns", "Virtual Events", "Trade Shows", "Live Streaming"]
-  },
-  {
+
+export const specializedServices = [
     id: 13,
     icon: "Smartphone",
     title: "Web & App Development",
