@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NowhereDigitalWebsite from "./components/NowhereDigitalWebsite";
+import AdminDashboard from "./components/AdminDashboard";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<NowhereDigitalWebsite />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
       {/* Debug info - remove in production */}
