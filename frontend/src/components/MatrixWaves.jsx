@@ -212,7 +212,7 @@ const MatrixWaves = ({ className = "", intensity = 0.5 }) => {
           const y = Math.random() * canvas.height;
           const opacity = Math.random() * 0.3 + 0.1;
           
-          ctx.strokeStyle = `rgba(0, 255, 65, ${opacity})`;
+          ctx.strokeStyle = `rgba(0, 255, 255, ${opacity})`;
           ctx.lineWidth = Math.random() * 3 + 1;
           
           ctx.beginPath();
