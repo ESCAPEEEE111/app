@@ -564,7 +564,7 @@ const NowhereDigitalWebsite = () => {
                   <Rocket className="w-6 h-6 text-matrix-green" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-matrix-green font-mono">
+                  <h1 className="text-xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan">
                     NOWHERE
                   </h1>
                   <p className="text-xs text-matrix-green/60 font-mono">DIGITAL_MATRIX</p>
