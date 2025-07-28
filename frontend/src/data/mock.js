@@ -457,6 +457,7 @@ export const services = [
       reporting: ["Real-time", "Daily", "Weekly", "Monthly", "Custom"],
       visualizations: ["Charts", "Graphs", "Heatmaps", "Geographic Maps"],
       includes: ["Dashboard Setup", "Data Integration", "Training", "Support"]
+    }
   }
 ];
 
