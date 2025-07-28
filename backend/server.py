@@ -209,7 +209,7 @@ async def create_chat_session(
         
         # Track analytics
         await db.analytics.update_one(
-            {"analytics_date": date.today()},
+            {"analytics_date": date.today().isoformat()},
             {"$inc": {"chat_sessions": 1}},
             upsert=True
         )
