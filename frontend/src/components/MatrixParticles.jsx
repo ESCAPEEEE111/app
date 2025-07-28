@@ -153,6 +153,7 @@ const MatrixParticles = ({ className = "", particleCount = 100 }) => {
         for (let i = 0; i < data.length; i += 4) {
           if (Math.random() < 0.001) {
             data[i + 1] = Math.min(255, data[i + 1] + Math.random() * 50); // Green channel
+            data[i + 2] = Math.min(255, data[i + 2] + Math.random() * 50); // Blue channel
           }
         }
         
