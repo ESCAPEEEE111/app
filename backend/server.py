@@ -70,7 +70,7 @@ class AnalyticsMiddleware(BaseHTTPMiddleware):
     async def track_page_view(self):
         try:
             db = get_database()
-            today = date.today()
+            today = date.today().isoformat()  # Convert to string
             
             # Update or create today's analytics
             await db.analytics.update_one(
