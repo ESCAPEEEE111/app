@@ -145,7 +145,7 @@ const MatrixRain = ({ className = "", density = 50, interactive = true }) => {
 
         // Draw glow effect if enabled
         if (glowEffect && opacity > 0.3) {
-          context.shadowColor = '#00FF41';
+          context.shadowColor = '#00FFFF';
           context.shadowBlur = 8;
         } else {
           context.shadowBlur = 0;
