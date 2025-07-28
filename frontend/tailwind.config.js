@@ -53,11 +53,14 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-  			// Matrix Theme Colors
+  			// Matrix Theme Colors - Updated to Teal/Cyan Theme
   			'matrix-green': '#00FF41',
   			'matrix-bright-green': '#00FF00',
   			'matrix-dark-green': '#003B00',
   			'matrix-cyan': '#00FFFF',
+  			'matrix-bright-cyan': '#00E5FF',
+  			'matrix-dark-cyan': '#004D50', 
+  			'matrix-teal': '#14B8A6',
   			'matrix-blue': '#0077BE',
   			'matrix-black': '#000000',
   			'matrix-dark-grey': '#0D0208',
