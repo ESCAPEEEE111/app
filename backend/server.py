@@ -117,7 +117,7 @@ async def create_contact_form(
         
         # Track analytics
         await db.analytics.update_one(
-            {"analytics_date": date.today()},
+            {"analytics_date": date.today().isoformat()},
             {"$inc": {"contact_forms": 1}},
             upsert=True
         )
