@@ -162,8 +162,8 @@ const MatrixRain = ({ className = "", density = 50, interactive = true }) => {
         // Draw trail
         for (let j = 1; j < drop.trail && drop.y - j * fontSize > 0; j++) {
           const trailOpacity = opacity * (1 - j / drop.trail);
-          const trailGreen = Math.floor(255 * trailOpacity);
-          context.fillStyle = `rgb(0, ${trailGreen}, 65)`;
+          const trailCyan = Math.floor(255 * trailOpacity);
+          context.fillStyle = `rgb(0, ${trailCyan}, 255)`;
           
           const trailChar = matrixChars[Math.floor(Math.random() * matrixChars.length)];
           context.fillText(trailChar, i * fontSize, drop.y - j * fontSize);
