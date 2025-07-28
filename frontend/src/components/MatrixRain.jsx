@@ -99,7 +99,7 @@ const MatrixRain = ({ className = "", density = 50, interactive = true }) => {
 
     // Background grid pattern
     const drawGrid = () => {
-      bgCtx.strokeStyle = 'rgba(0, 255, 65, 0.03)';
+      bgCtx.strokeStyle = 'rgba(0, 255, 255, 0.03)';
       bgCtx.lineWidth = 1;
       
       // Vertical lines
