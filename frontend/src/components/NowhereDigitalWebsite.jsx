@@ -419,6 +419,9 @@ const NowhereDigitalWebsite = () => {
         </div>
       </section>
 
+      {/* Advanced Matrix Sections */}
+      <MatrixAdvancedSections />
+
       {/* Contact Section */}
       <section id="contact" className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
