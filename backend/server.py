@@ -612,7 +612,7 @@ async def get_analytics_summary():
         db = get_database()
         
         # Get today's analytics
-        today = date.today()
+        today = date.today().isoformat()
         today_analytics = await db.analytics.find_one({"analytics_date": today})
         
         # Get total counts
