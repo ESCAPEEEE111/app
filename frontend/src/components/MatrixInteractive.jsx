@@ -206,8 +206,8 @@ const MatrixInteractive = ({ className = "" }) => {
             point.x, point.y, 0,
             point.x, point.y, 20
           );
-          gradient.addColorStop(0, `rgba(0, 255, 65, ${opacity * 0.3})`);
-          gradient.addColorStop(1, 'rgba(0, 255, 65, 0)');
+          gradient.addColorStop(0, `rgba(0, 255, 255, ${opacity * 0.3})`);
+          gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
           
           ctx.fillStyle = gradient;
           ctx.fillRect(point.x - 20, point.y - 20, 40, 40);
