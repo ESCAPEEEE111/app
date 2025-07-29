@@ -97,15 +97,8 @@ const NowhereDigitalWebsite = () => {
 
   return (
     <MobileMatrixOptimizer className="min-h-screen bg-black text-matrix-green relative overflow-hidden">
-      {/* Advanced Matrix Background Effects */}
-      <MatrixWaves className="fixed inset-0 z-0" intensity={0.6} />
-      <MatrixRain className="fixed inset-0 z-0" density={60} interactive={true} />
-      <MatrixParticles className="fixed inset-0 z-0" particleCount={80} />
-      <MatrixInteractive className="fixed inset-0 z-0" />
-      
-      {/* Additional ambient effects */}
-      <div className="fixed inset-0 z-0 bg-gradient-radial from-transparent via-transparent to-black opacity-30" />
-      <div className="fixed inset-0 z-0 bg-matrix-grid bg-matrix-grid opacity-5" />
+      {/* Clean background without animations */}
+      <div className="fixed inset-0 z-0 bg-black" />
       
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-matrix-green/30' : 'bg-transparent'}`}>
