@@ -2,464 +2,390 @@
 
 // Mock data for NOWHERE Digital Marketing Agency
 
-export const services = [
+// Ultimate All-in-One Digital Services Platform - Future-Ready Ecosystem
+
+export const ultimateServices = [
   {
     id: 1,
-    icon: "Megaphone",
-    title: "Social Media Marketing",
-    description: "Instagram, TikTok, LinkedIn, YouTube - Complete social media management",
-    features: ["Content Creation", "Community Management", "Paid Advertising", "Analytics & Reporting"],
+    category: "AI_POWERED_AUTOMATION",
+    icon: "🤖",
+    title: "AI Business Automation Suite",
+    description: "Complete AI-driven business automation with custom AI agents, workflow optimization, and intelligent decision-making systems",
+    features: [
+      "Custom AI Agent Development",
+      "Automated Workflow Creation", 
+      "Intelligent Document Processing",
+      "AI-Powered Customer Service",
+      "Predictive Analytics & Forecasting",
+      "Smart Resource Allocation",
+      "Automated Reporting Systems",
+      "Voice & Text AI Assistants"
+    ],
     pricing: {
-      basic: {
-        name: "STARTER",
-        price: "AED 2,999",
+      starter: {
+        name: "AI_BASIC",
+        price: "AED 4,999",
         duration: "/month",
         features: [
-          "5 Social Media Platforms",
-          "12 Posts per Month",
-          "Basic Analytics",
-          "Community Management",
-          "1 Campaign per Month"
+          "3 Custom AI Agents",
+          "Basic Workflow Automation",
+          "10,000 AI Interactions/month",
+          "Standard Integrations",
+          "Email Support"
         ]
       },
-      premium: {
-        name: "PROFESSIONAL",
-        price: "AED 5,999", 
+      professional: {
+        name: "AI_PROFESSIONAL", 
+        price: "AED 12,999",
         duration: "/month",
+        popular: true,
         features: [
-          "All Social Media Platforms",
-          "25 Posts per Month",
-          "Advanced Analytics",
-          "24/7 Community Management",
-          "3 Campaigns per Month",
-          "Influencer Outreach",
-          "Paid Ads Management"
+          "Unlimited AI Agents",
+          "Advanced Workflow Automation",
+          "100,000 AI Interactions/month",
+          "All Integrations",
+          "Custom AI Model Training",
+          "24/7 Priority Support",
+          "API Access"
         ]
       },
       enterprise: {
-        name: "ENTERPRISE",
-        price: "AED 12,999",
-        duration: "/month", 
+        name: "AI_ENTERPRISE",
+        price: "AED 29,999",
+        duration: "/month",
         features: [
-          "Unlimited Platforms",
-          "50+ Posts per Month",
-          "Real-time Analytics",
-          "Dedicated Account Manager",
-          "Unlimited Campaigns",
-          "Celebrity Influencer Network",
-          "Advanced AI Targeting"
+          "Enterprise AI Infrastructure",
+          "Unlimited Everything",
+          "Custom AI Development",
+          "Dedicated AI Engineers",
+          "White-label Solutions",
+          "Multi-language AI",
+          "Advanced Security"
         ]
       }
     },
     specifications: {
-      deliveryTime: "3-5 business days",
-      revisions: "Unlimited",
-      platforms: ["Instagram", "TikTok", "LinkedIn", "YouTube", "Facebook", "Snapchat"],
-      contentTypes: ["Videos", "Images", "Stories", "Reels", "Carousels"],
-      languages: ["Arabic", "English", "Hindi", "Urdu"],
-      includes: ["Content Strategy", "Hashtag Research", "Competitor Analysis", "Performance Tracking"]
+      deliveryTime: "2-4 weeks for full setup",
+      revisions: "Continuous optimization",
+      platforms: ["Web", "Mobile", "Desktop", "API", "Voice", "IoT"],
+      languages: ["Arabic", "English", "Hindi", "Urdu", "French", "Spanish", "Chinese"],
+      includes: ["AI Model Training", "Custom Development", "Integration", "Monitoring"]
+    },
+    futureReady: {
+      upcomingFeatures: ["Quantum AI Integration", "Metaverse Business Tools", "Brain-Computer Interfaces"],
+      roadmap: "2024-2030 Development Plan Available"
     }
   },
   {
     id: 2,
-    icon: "MessageCircle",
-    title: "WhatsApp Business Solutions",
-    description: "Essential for UAE market - Complete WhatsApp business integration",
-    features: ["API Setup", "Automated Chatbots", "Catalog Management", "Payment Integration"],
+    category: "COMPLETE_DIGITAL_ECOSYSTEM",
+    icon: "🌐",
+    title: "360° Digital Transformation Suite",
+    description: "Complete digital ecosystem including web/app development, cloud infrastructure, cybersecurity, and digital operations management",
+    features: [
+      "Custom Web & Mobile Development",
+      "Cloud Infrastructure Setup",
+      "Cybersecurity Implementation",
+      "Digital Operations Management",
+      "API Development & Integration",
+      "Database Architecture",
+      "DevOps & CI/CD Pipelines",
+      "Performance Monitoring"
+    ],
     pricing: {
-      basic: {
-        name: "BASIC_BOT",
-        price: "AED 1,999",
+      starter: {
+        name: "DIGITAL_FOUNDATION",
+        price: "AED 8,999",
         duration: "/month",
         features: [
-          "Basic Chatbot Setup",
-          "500 Messages/Month",
-          "Product Catalog (50 items)",
-          "Order Management",
-          "Basic Analytics"
+          "Custom Website + Mobile App",
+          "Basic Cloud Setup",
+          "Standard Security",
+          "5 API Integrations",
+          "Monthly Maintenance"
         ]
       },
-      premium: {
-        name: "AI_POWERED",
-        price: "AED 4,999",
+      professional: {
+        name: "DIGITAL_MASTERY",
+        price: "AED 19,999", 
         duration: "/month",
+        popular: true,
         features: [
-          "Advanced AI Chatbot",
-          "5,000 Messages/Month",
-          "Unlimited Product Catalog",
-          "Payment Gateway Integration",
-          "Multi-language Support",
-          "CRM Integration",
-          "Advanced Analytics"
+          "Advanced Web/Mobile Platform",
+          "Enterprise Cloud Infrastructure",
+          "Advanced Security Suite",
+          "Unlimited API Integrations",
+          "Real-time Monitoring",
+          "24/7 Technical Support",
+          "Weekly Optimization"
         ]
       },
       enterprise: {
-        name: "ENTERPRISE_AI",
-        price: "AED 9,999",
+        name: "DIGITAL_DOMINANCE",
+        price: "AED 49,999",
         duration: "/month",
         features: [
-          "Custom AI Assistant",
-          "Unlimited Messages",
-          "Full E-commerce Integration",
-          "Multi-agent Support",
-          "API Integrations",
-          "Custom Workflows",
-          "24/7 Priority Support"
+          "Enterprise-grade Platform",
+          "Multi-cloud Architecture",
+          "Military-grade Security",
+          "Custom Infrastructure",
+          "Dedicated DevOps Team",
+          "White-label Solutions",
+          "Global CDN Network"
         ]
       }
     },
     specifications: {
-      deliveryTime: "1-3 business days",
-      revisions: "3 Free Revisions",
-      platforms: ["WhatsApp Business API", "WhatsApp Web", "Mobile App"],
-      integrations: ["Shopify", "WooCommerce", "Magento", "Custom APIs"],
-      languages: ["Arabic", "English", "Hindi", "Urdu"],
-      includes: ["Bot Training", "Catalog Setup", "Payment Integration", "Analytics Dashboard"]
+      deliveryTime: "4-8 weeks for complete setup",
+      revisions: "Unlimited during development",
+      platforms: ["Web", "iOS", "Android", "Desktop", "API", "Cloud"],
+      technologies: ["React", "Node.js", "Python", "AI/ML", "Blockchain", "IoT"],
+      includes: ["Architecture Design", "Development", "Testing", "Deployment", "Maintenance"]
     }
   },
   {
     id: 3,
-    icon: "Globe",
-    title: "Multi-Language Marketing",
-    description: "Arabic, English, Hindi, Urdu content creation & cultural marketing",
-    features: ["Arabic Content", "Cultural Campaigns", "Ramadan Marketing", "Localization"],
+    category: "ADVANCED_MARKETING_INTELLIGENCE",
+    icon: "📊", 
+    title: "AI-Powered Marketing Intelligence Platform",
+    description: "Advanced marketing automation with AI-driven insights, omnichannel campaigns, and predictive customer behavior analysis",
+    features: [
+      "AI-Driven Customer Segmentation",
+      "Predictive Marketing Analytics",
+      "Omnichannel Campaign Management",
+      "Real-time Performance Optimization",
+      "Advanced Attribution Modeling",
+      "Customer Journey Mapping",
+      "Automated A/B Testing",
+      "ROI Prediction & Optimization"
+    ],
     pricing: {
-      basic: {
-        name: "BILINGUAL",
-        price: "AED 3,499",
-        duration: "/month",
-        features: [
-          "2 Languages (Arabic + English)",
-          "15 Content Pieces/Month",
-          "Cultural Calendar",
-          "Basic Localization",
-          "Social Media Content"
-        ]
-      },
-      premium: {
-        name: "MULTILINGUAL",
+      starter: {
+        name: "MARKETING_SMART",
         price: "AED 6,999",
         duration: "/month",
         features: [
-          "4 Languages Support",
-          "30 Content Pieces/Month",
-          "Ramadan & Eid Campaigns",
-          "Advanced Localization",
-          "Video Content",
-          "Cultural Influencer Network",
-          "Market Research"
+          "5 Marketing Channels",
+          "Basic AI Analytics",
+          "10,000 Contacts",
+          "Standard Automation",
+          "Monthly Reports"
+        ]
+      },
+      professional: {
+        name: "MARKETING_GENIUS",
+        price: "AED 16,999",
+        duration: "/month", 
+        popular: true,
+        features: [
+          "All Marketing Channels",
+          "Advanced AI Analytics",
+          "Unlimited Contacts",
+          "Smart Automation",
+          "Real-time Dashboards",
+          "Predictive Insights",
+          "Custom Integrations"
         ]
       },
       enterprise: {
-        name: "GLOBAL_REACH",
-        price: "AED 14,999",
+        name: "MARKETING_SUPREMACY",
+        price: "AED 39,999",
         duration: "/month",
         features: [
-          "Unlimited Languages",
-          "60+ Content Pieces/Month",
-          "Full Cultural Campaigns",
-          "Regional Market Expansion",
-          "Celebrity Endorsements",
-          "International SEO",
-          "Global Brand Strategy"
+          "Enterprise Marketing Suite",
+          "Custom AI Models",
+          "Global Campaign Management",
+          "Advanced Attribution",
+          "Dedicated Marketing Team",
+          "White-label Platform",
+          "Priority Innovation Access"
         ]
       }
-    },
-    specifications: {
-      deliveryTime: "5-7 business days",
-      revisions: "Unlimited",
-      languages: ["Arabic", "English", "Hindi", "Urdu", "Tagalog", "French"],
-      contentTypes: ["Blog Posts", "Social Media", "Video Scripts", "Website Copy"],
-      culturalEvents: ["Ramadan", "Eid", "National Day", "Dubai Shopping Festival"],
-      includes: ["Cultural Research", "Native Speakers", "Religious Compliance", "Local Trends"]
     }
   },
   {
     id: 4,
-    icon: "Search",
-    title: "SEO & Search Marketing",
-    description: "Local SEO for Dubai & UAE with Arabic keyword optimization",
-    features: ["Local SEO", "Google Ads", "Voice Search", "Directory Optimization"],
+    category: "FUTURE_COMMERCE_SOLUTIONS",
+    icon: "🛒",
+    title: "Next-Gen E-commerce & Fintech Platform", 
+    description: "Future-ready commerce platform with Web3 integration, cryptocurrency payments, NFT marketplace, and global marketplace connectivity",
+    features: [
+      "Advanced E-commerce Platform",
+      "Cryptocurrency Payment Integration",
+      "NFT Marketplace Development",
+      "Web3 & Blockchain Integration",
+      "Global Marketplace Connectivity",
+      "AI-Powered Inventory Management",
+      "Smart Contract Implementation",
+      "Decentralized Finance (DeFi) Tools"
+    ],
     pricing: {
-      basic: {
-        name: "LOCAL_SEO",
-        price: "AED 2,499",
-        duration: "/month",
-        features: [
-          "Local Business Optimization",
-          "5 Keywords Targeting",
-          "Google My Business Setup",
-          "Basic Link Building",
-          "Monthly Reports"
-        ]
-      },
-      premium: {
-        name: "SEARCH_DOMINATION",
-        price: "AED 5,999",
-        duration: "/month",
-        features: [
-          "20 Keywords Targeting",
-          "Google Ads Management",
-          "Voice Search Optimization",
-          "Advanced Link Building",
-          "Competitor Analysis",
-          "Arabic SEO",
-          "Conversion Tracking"
-        ]
-      },
-      enterprise: {
-        name: "MARKET_LEADER",
-        price: "AED 12,999",
-        duration: "/month",
-        features: [
-          "Unlimited Keywords",
-          "Multi-platform Ads",
-          "AI-powered SEO",
-          "Enterprise Link Building",
-          "International SEO",
-          "Technical SEO Audit",
-          "Dedicated SEO Specialist"
-        ]
-      }
-    },
-    specifications: {
-      deliveryTime: "2-4 weeks for initial setup",
-      revisions: "Monthly optimizations",
-      platforms: ["Google", "Bing", "Baidu", "Yandex"],
-      targeting: ["Dubai", "Abu Dhabi", "Sharjah", "UAE", "GCC", "MENA"],
-      languages: ["Arabic", "English"],
-      includes: ["Keyword Research", "On-page SEO", "Technical Audit", "Backlink Analysis"]
-    }
-  },
-  {
-    id: 5,
-    icon: "Camera",
-    title: "Content Marketing",
-    description: "AI-powered content generation and visual storytelling",
-    features: ["Video Production", "Blog Writing", "Infographics", "AI Content"],
-    pricing: {
-      basic: {
-        name: "CONTENT_CREATOR",
-        price: "AED 3,999",
-        duration: "/month",
-        features: [
-          "8 Blog Posts/Month",
-          "4 Videos/Month",
-          "12 Graphics/Month",
-          "AI Content Writing",
-          "Basic SEO Optimization"
-        ]
-      },
-      premium: {
-        name: "STORYTELLER",
-        price: "AED 7,999",
-        duration: "/month",
-        features: [
-          "15 Blog Posts/Month",
-          "8 Professional Videos",
-          "25 Custom Graphics",
-          "AI Video Generation",
-          "Advanced SEO Content",
-          "Interactive Content",
-          "Content Strategy"
-        ]
-      },
-      enterprise: {
-        name: "CONTENT_EMPIRE",
-        price: "AED 15,999",
-        duration: "/month",
-        features: [
-          "Unlimited Blog Posts",
-          "20+ Professional Videos",
-          "50+ Custom Graphics",
-          "AI-powered Everything",
-          "3D Animation",
-          "VR/AR Content",
-          "Content Distribution Network"
-        ]
-      }
-    },
-    specifications: {
-      deliveryTime: "3-7 business days",
-      revisions: "Unlimited",
-      videoTypes: ["Reels", "TikTok", "YouTube", "Corporate", "Product Demo"],
-      contentFormats: ["Blog", "Infographic", "Video", "Podcast", "eBook", "Whitepaper"],
-      aiTools: ["GPT-4", "DALL-E", "Midjourney", "Runway", "Synthesia"],
-      includes: ["Content Calendar", "SEO Research", "Visual Assets", "Performance Analytics"]
-    }
-  },
-  {
-    id: 6,
-    icon: "ShoppingBag",
-    title: "E-commerce Solutions",
-    description: "Complete e-commerce setup with UAE marketplace integration",
-    features: ["Instagram Shopping", "Noon.com Setup", "Payment Gateways", "CRO"],
-    pricing: {
-      basic: {
-        name: "ONLINE_STORE",
-        price: "AED 4,999",
-        duration: "/month",
-        features: [
-          "Basic E-commerce Store",
-          "50 Products Setup",
-          "Payment Gateway Integration",
-          "Instagram Shopping",
-          "Basic Analytics"
-        ]
-      },
-      premium: {
-        name: "MARKETPLACE_PRO",
+      starter: {
+        name: "COMMERCE_FUTURE",
         price: "AED 9,999",
         duration: "/month",
         features: [
           "Advanced E-commerce Store",
-          "500 Products Management",
-          "Multi-marketplace Integration",
-          "Advanced Payment Options",
-          "Inventory Management",
-          "Customer Support System",
-          "Conversion Optimization"
+          "Basic Crypto Payments",
+          "Standard Marketplace Integration",
+          "AI Inventory Management",
+          "Mobile Commerce App"
+        ]
+      },
+      professional: {
+        name: "COMMERCE_REVOLUTION",
+        price: "AED 24,999",
+        duration: "/month",
+        popular: true,
+        features: [
+          "Enterprise Commerce Platform",
+          "Full Crypto & DeFi Integration",
+          "NFT Marketplace",
+          "Web3 Features",
+          "Global Multi-marketplace",
+          "Advanced Analytics",
+          "Custom Blockchain Solutions"
         ]
       },
       enterprise: {
-        name: "ECOMMERCE_EMPIRE",
-        price: "AED 19,999",
+        name: "COMMERCE_DOMINATION",
+        price: "AED 59,999",
         duration: "/month",
         features: [
-          "Enterprise E-commerce Platform",
-          "Unlimited Products",
-          "All UAE Marketplaces",
-          "AI-powered Recommendations",
-          "Advanced Analytics",
-          "Multi-currency Support",
-          "Dedicated Account Manager"
+          "Custom Blockchain Platform",
+          "Enterprise DeFi Solutions",
+          "White-label NFT Platform",
+          "Global Commerce Network",
+          "Dedicated Blockchain Team",
+          "Regulatory Compliance",
+          "Future Technology Access"
         ]
       }
-    },
-    specifications: {
-      deliveryTime: "1-3 weeks for setup",
-      revisions: "Unlimited",
-      platforms: ["Shopify", "WooCommerce", "Magento", "Custom Development"],
-      marketplaces: ["Noon.com", "Amazon.ae", "Instagram", "Facebook Shop"],
-      paymentGateways: ["Network International", "PayFort", "Stripe", "PayPal"],
-      includes: ["Store Design", "Product Catalog", "SEO Setup", "Mobile Optimization"]
     }
   },
   {
-    id: 7,
-    icon: "Brain",
-    title: "AI Solutions",
-    description: "Cutting-edge AI chatbots with Arabic language support",
-    features: ["Custom AI Models", "Voice Assistants", "Predictive Analytics", "Machine Learning"],
+    id: 5,
+    category: "IMMERSIVE_EXPERIENCES",
+    icon: "🥽",
+    title: "Metaverse & Immersive Technology Suite",
+    description: "Cutting-edge AR/VR solutions, metaverse presence, virtual showrooms, and immersive customer experiences",
+    features: [
+      "Custom AR/VR Applications",
+      "Metaverse Business Presence",
+      "Virtual Showrooms & Stores",
+      "3D Product Visualization",
+      "Virtual Events & Conferences",
+      "Immersive Training Programs",
+      "Mixed Reality Experiences",
+      "Spatial Computing Solutions"
+    ],
     pricing: {
-      basic: {
-        name: "AI_ASSISTANT",
-        price: "AED 5,999",
-        duration: "/month",
-        features: [
-          "Basic AI Chatbot",
-          "1,000 Conversations/Month",
-          "Pre-trained Models",
-          "Text-only Interactions",
-          "Basic Analytics"
-        ]
-      },
-      premium: {
-        name: "AI_INTELLIGENCE",
+      starter: {
+        name: "IMMERSIVE_BASIC",
         price: "AED 12,999",
         duration: "/month",
         features: [
-          "Advanced AI System",
-          "10,000 Conversations/Month",
-          "Custom Model Training",
-          "Voice & Text Interactions",
-          "Predictive Analytics",
-          "Multi-language Support",
-          "API Integrations"
+          "Basic AR/VR App",
+          "Virtual Showroom",
+          "3D Product Models",
+          "Standard VR Experiences",
+          "Mobile AR Features"
+        ]
+      },
+      professional: {
+        name: "IMMERSIVE_ADVANCED",
+        price: "AED 29,999",
+        duration: "/month",
+        popular: true,
+        features: [
+          "Advanced AR/VR Platform",
+          "Metaverse Business Hub",
+          "Interactive Virtual Experiences",
+          "Custom 3D Environments",
+          "Multi-platform Deployment",
+          "Real-time Collaboration Tools",
+          "Analytics & Insights"
         ]
       },
       enterprise: {
-        name: "AI_SUPREMACY",
-        price: "AED 24,999",
+        name: "IMMERSIVE_MASTERY",
+        price: "AED 69,999",
         duration: "/month",
         features: [
-          "Enterprise AI Platform",
-          "Unlimited Conversations",
-          "Custom AI Development",
-          "Voice, Text, and Visual AI",
-          "Machine Learning Models",
-          "Real-time Analytics",
-          "Dedicated AI Engineer"
+          "Enterprise Metaverse Platform",
+          "Custom Virtual Worlds",
+          "Advanced Spatial Computing",
+          "Global Virtual Presence",
+          "Dedicated XR Team",
+          "Hardware Integration",
+          "Future Reality Access"
         ]
       }
-    },
-    specifications: {
-      deliveryTime: "2-6 weeks for development",
-      revisions: "Continuous optimization",
-      aiModels: ["GPT-4", "Claude", "Gemini", "Custom Models"],
-      languages: ["Arabic", "English", "Hindi", "Urdu", "Tagalog"],
-      integrations: ["WhatsApp", "Website", "Mobile App", "CRM", "ERP"],
-      includes: ["Model Training", "API Setup", "Documentation", "Ongoing Support"]
     }
   },
   {
-    id: 8,
-    icon: "BarChart3",
-    title: "Analytics & Insights",
-    description: "Advanced data analytics and business intelligence for UAE market",
-    features: ["Real-time Dashboards", "Predictive Analytics", "Market Research", "ROI Tracking"],
+    id: 6,
+    category: "INTELLIGENT_DATA_ECOSYSTEM",
+    icon: "🧠",
+    title: "AI-Driven Data Intelligence & Analytics Platform",
+    description: "Advanced data analytics, machine learning models, predictive insights, and intelligent business optimization",
+    features: [
+      "Advanced Data Analytics",
+      "Custom Machine Learning Models",
+      "Predictive Business Intelligence",
+      "Real-time Data Processing",
+      "Automated Insights Generation",
+      "Data Visualization Dashboards",
+      "Competitive Intelligence",
+      "Market Trend Prediction"
+    ],
     pricing: {
-      basic: {
+      starter: {
         name: "DATA_INSIGHTS",
-        price: "AED 2,999",
+        price: "AED 7,999",
         duration: "/month",
         features: [
-          "Basic Analytics Dashboard",
+          "Basic Analytics Platform",
           "5 Data Sources",
+          "Standard ML Models",
           "Monthly Reports",
-          "Standard Metrics",
-          "Email Alerts"
+          "Basic Visualizations"
         ]
       },
-      premium: {
-        name: "INTELLIGENCE_HUB",
-        price: "AED 6,999",
+      professional: {
+        name: "DATA_INTELLIGENCE",
+        price: "AED 18,999",
         duration: "/month",
+        popular: true,
         features: [
-          "Advanced Analytics Platform",
-          "15 Data Sources",
+          "Advanced Analytics Suite",
+          "Unlimited Data Sources",
+          "Custom ML Models",
           "Real-time Dashboards",
           "Predictive Analytics",
-          "Custom Reports",
-          "API Access",
-          "Market Intelligence"
+          "Automated Insights",
+          "API Integration"
         ]
       },
       enterprise: {
-        name: "DATA_DOMINANCE",
-        price: "AED 14,999",
+        name: "DATA_SUPREMACY",
+        price: "AED 44,999",
         duration: "/month",
         features: [
-          "Enterprise Analytics Suite",
-          "Unlimited Data Sources",
-          "AI-powered Insights",
-          "Machine Learning Models",
-          "Custom Dashboards",
-          "White-label Solution",
-          "Dedicated Data Scientist"
+          "Enterprise Data Platform",
+          "Custom AI Development",
+          "Big Data Processing",
+          "Advanced Predictions",
+          "Dedicated Data Scientists",
+          "White-label Solutions",
+          "Quantum Computing Ready"
         ]
       }
-    },
-    specifications: {
-      deliveryTime: "1-2 weeks for setup",
-      revisions: "Monthly optimizations",
-      dataSources: ["Google Analytics", "Social Media", "CRM", "E-commerce", "Custom APIs"],
-      reporting: ["Real-time", "Daily", "Weekly", "Monthly", "Custom"],
-      visualizations: ["Charts", "Graphs", "Heatmaps", "Geographic Maps"],
-      includes: ["Dashboard Setup", "Data Integration", "Training", "Support"]
     }
   }
 ];
+
+export const services = ultimateServices;
 
 export const specializedServices = [
   {
