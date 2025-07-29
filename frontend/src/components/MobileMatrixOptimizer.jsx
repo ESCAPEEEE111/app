@@ -53,22 +53,6 @@ const MobileMatrixOptimizer = ({ children, className = "" }) => {
             scroll-behavior: smooth;
           }
           
-          .mobile-optimized .matrix-rain {
-            /* Reduce matrix rain intensity on mobile */
-            opacity: 0.4;
-            animation-duration: 2s;
-          }
-          
-          .mobile-optimized .matrix-particles {
-            /* Fewer particles on mobile */
-            display: none;
-          }
-          
-          .mobile-optimized .matrix-waves {
-            /* Simpler waves on mobile */
-            opacity: 0.3;
-          }
-          
           .mobile-optimized .text-5xl,
           .mobile-optimized .text-6xl,
           .mobile-optimized .text-7xl {
@@ -89,11 +73,6 @@ const MobileMatrixOptimizer = ({ children, className = "" }) => {
             padding: 1rem !important;
           }
           
-          .mobile-optimized .space-x-8 > :not([hidden]) ~ :not([hidden]) {
-            /* Reduced spacing on mobile */
-            margin-left: 1rem !important;
-          }
-          
           .touch-enabled button,
           .touch-enabled .cursor-pointer {
             /* Larger touch targets */
@@ -109,34 +88,6 @@ const MobileMatrixOptimizer = ({ children, className = "" }) => {
           .orientation-portrait .grid-cols-2 {
             /* Single column in portrait */
             grid-template-columns: 1fr !important;
-          }
-          
-          /* Mobile-specific animations */
-          @media (max-width: 768px) {
-            .matrix-text-glow {
-              animation-duration: 3s;
-            }
-            
-            .animate-pulse {
-              animation-duration: 3s;
-            }
-            
-            .transform {
-              transform: none !important;
-            }
-            
-            .hover\\:scale-105:hover {
-              transform: none !important;
-            }
-          }
-          
-          /* Reduce motion for users who prefer it */
-          @media (prefers-reduced-motion: reduce) {
-            .matrix-text-glow,
-            .animate-pulse,
-            .animate-ping {
-              animation: none !important;
-            }
           }
         `}</style>
       )}
