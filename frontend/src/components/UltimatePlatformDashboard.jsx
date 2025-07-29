@@ -92,7 +92,7 @@ const UltimatePlatformDashboard = ({ className = "" }) => {
     { name: 'Cybersecurity', icon: Shield, level: 99 },
     { name: 'IoT Integration', icon: Cpu, level: 92 },
     { name: 'Quantum Computing', icon: Zap, level: 85 },
-    { name: 'AR/VR/XR', icon: VrHeadset, level: 96 }
+    { name: 'AR/VR/XR', icon: Headset, level: 96 }
   ];
 
   const globalCapabilities = [
