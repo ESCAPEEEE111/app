@@ -265,6 +265,9 @@ const NowhereDigitalWebsite = () => {
         </div>
       </section>
 
+      {/* Ultimate Platform Dashboard Section */}
+      <UltimatePlatformDashboard className="py-20 relative z-10" />
+
       {/* Services Section */}
       <section id="services" className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
