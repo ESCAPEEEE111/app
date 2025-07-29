@@ -383,16 +383,23 @@ class BackendTester:
     
     async def run_all_tests(self):
         """Run all backend tests"""
-        print(f"🚀 Starting Backend API Tests")
+        print(f"🚀 Starting Comprehensive Backend API Tests")
         print(f"📍 Backend URL: {BACKEND_URL}")
         print(f"📍 API Base: {API_BASE}")
         print("=" * 60)
         
-        # Test existing core endpoints first
+        # Test core endpoints first
+        print("\n🔧 Testing Core Endpoints:")
+        print("-" * 40)
         await self.test_health_endpoint()
         await self.test_contact_form_submission()
         await self.test_content_recommendations()
         await self.test_analytics_summary()
+        
+        print("\n💬 Testing Chat System:")
+        print("-" * 40)
+        await self.test_chat_session_creation()
+        await self.test_chat_message_sending()
         
         print("\n🤖 Testing AI Problem Analysis Endpoint:")
         print("-" * 40)
@@ -405,7 +412,7 @@ class BackendTester:
         
         # Summary
         print("\n" + "=" * 60)
-        print("📊 TEST SUMMARY")
+        print("📊 COMPREHENSIVE TEST SUMMARY")
         print("=" * 60)
         
         total_tests = len(self.test_results)
