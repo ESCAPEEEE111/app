@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { 
+  ArrowRight, CheckCircle, Megaphone, MessageCircle, Globe, 
+  Search, Camera, ShoppingBag, Brain, BarChart3, Eye, Shield, 
+  Volume2, Calendar, Plane, Building, Heart, Home, Rocket, 
+  Smartphone, Zap 
+} from 'lucide-react';
 import { services, specializedServices } from '../data/mock';
 import MobileMatrixOptimizer from '../components/MobileMatrixOptimizer';
 import { Button } from '../components/ui/button';
@@ -9,25 +14,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 
 // Icon mapping
 const iconMap = {
-  Megaphone: require('lucide-react').Megaphone,
-  MessageCircle: require('lucide-react').MessageCircle,
-  Globe: require('lucide-react').Globe,
-  Search: require('lucide-react').Search,
-  Camera: require('lucide-react').Camera,
-  ShoppingBag: require('lucide-react').ShoppingBag,
-  Brain: require('lucide-react').Brain,
-  BarChart3: require('lucide-react').BarChart3,
-  Eye: require('lucide-react').Eye,
-  Shield: require('lucide-react').Shield,
-  Volume2: require('lucide-react').Volume2,
-  Calendar: require('lucide-react').Calendar,
-  Plane: require('lucide-react').Plane,
-  Building: require('lucide-react').Building,
-  Heart: require('lucide-react').Heart,
-  Home: require('lucide-react').Home,
-  Rocket: require('lucide-react').Rocket,
-  Smartphone: require('lucide-react').Smartphone,
-  Zap: require('lucide-react').Zap
+  Megaphone, MessageCircle, Globe, Search, Camera, ShoppingBag, 
+  Brain, BarChart3, Eye, Shield, Volume2, Calendar, Plane, 
+  Building, Heart, Home, Rocket, Smartphone, Zap
 };
 
 const ServicesPage = () => {
