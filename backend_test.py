@@ -313,6 +313,74 @@ class BackendTester:
             self.log_test("Analytics Summary", False, f"Exception: {str(e)}")
             return False
     
+    async def test_chat_session_creation(self):
+        """Test POST /api/chat/session endpoint"""
+        try:
+            async with self.session.post(
+                f"{API_BASE}/chat/session",
+                json={},
+                headers={"Content-Type": "application/json"}
+            ) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    if data.get("success") and "session_id" in data.get("data", {}):
+                        session_id = data["data"]["session_id"]
+                        # Store session_id for use in message test
+                        self.chat_session_id = session_id
+                        self.log_test("Chat Session Creation", True, f"Session created with ID: {session_id}")
+                        return True
+                    else:
+                        self.log_test("Chat Session Creation", False, "Invalid response structure", data)
+                        return False
+                else:
+                    self.log_test("Chat Session Creation", False, f"HTTP {response.status}", await response.text())
+                    return False
+        except Exception as e:
+            self.log_test("Chat Session Creation", False, f"Exception: {str(e)}")
+            return False
+    
+    async def test_chat_message_sending(self):
+        """Test POST /api/chat/message endpoint"""
+        try:
+            # First ensure we have a session ID
+            if not hasattr(self, 'chat_session_id'):
+                await self.test_chat_session_creation()
+            
+            if not hasattr(self, 'chat_session_id'):
+                self.log_test("Chat Message Sending", False, "No chat session available")
+                return False
+            
+            message_data = {
+                "session_id": self.chat_session_id,
+                "message": "What digital marketing services do you recommend for a restaurant in Dubai?",
+                "user_id": "test_user_123"
+            }
+            
+            async with self.session.post(
+                f"{API_BASE}/chat/message",
+                json=message_data,
+                headers={"Content-Type": "application/json"}
+            ) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    if data.get("success") and "response" in data.get("data", {}):
+                        ai_response = data["data"]["response"]
+                        if ai_response and len(ai_response) > 10:  # Should be substantial response
+                            self.log_test("Chat Message Sending", True, "AI chat response received successfully")
+                            return True
+                        else:
+                            self.log_test("Chat Message Sending", False, "AI response too short or empty", data)
+                            return False
+                    else:
+                        self.log_test("Chat Message Sending", False, "Invalid response structure", data)
+                        return False
+                else:
+                    self.log_test("Chat Message Sending", False, f"HTTP {response.status}", await response.text())
+                    return False
+        except Exception as e:
+            self.log_test("Chat Message Sending", False, f"Exception: {str(e)}")
+            return False
+    
     async def run_all_tests(self):
         """Run all backend tests"""
         print(f"🚀 Starting Backend API Tests")
