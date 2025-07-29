@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Play, Phone, Mail, MapPin, Star, CheckCircle, Zap, Rocket, Globe, Smartphone, Brain, BarChart3, Shield, Search, ShoppingBag, Eye, Volume2, Calendar, Building, Plane, Heart, Home, Megaphone, Camera, MessageCircle } from 'lucide-react';
 import { services, specializedServices, testimonials, stats, partnerBrands, navigationItems, contactInfo } from '../data/mock';
 import MatrixChatSystem from './MatrixChatSystem';
-import MatrixAdvancedSections from './MatrixAdvancedSections';
-import AIContentGenerator from './AIContentGenerator';
 import ServicesPricingSection from './ServicesPricingSection';
 import PricingShowcase from './PricingShowcase';
 import MobileMatrixOptimizer, { MobileMatrixText } from './MobileMatrixOptimizer';
