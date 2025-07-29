@@ -289,6 +289,29 @@ const AIProblemSolver = ({ className = "" }) => {
                 <div className="bg-black/30 rounded-lg p-6 border border-cyan-500/20">
                   <h4 className="text-cyan-400 font-mono font-bold mb-3">INTELLIGENT_ANALYSIS:</h4>
                   <p className="text-matrix-green/90 font-mono leading-relaxed">{problemAnalysis.aiAnalysis}</p>
+                  
+                  {/* Additional Analysis Sections */}
+                  {problemAnalysis.marketInsights && (
+                    <div className="mt-6">
+                      <h5 className="text-cyan-300 font-mono font-bold mb-2">MARKET_INSIGHTS:</h5>
+                      <p className="text-matrix-green/80 font-mono text-sm leading-relaxed">{problemAnalysis.marketInsights}</p>
+                    </div>
+                  )}
+                  
+                  {problemAnalysis.strategyProposal && (
+                    <div className="mt-6">
+                      <h5 className="text-cyan-300 font-mono font-bold mb-2">STRATEGIC_RECOMMENDATIONS:</h5>
+                      <p className="text-matrix-green/80 font-mono text-sm leading-relaxed">{problemAnalysis.strategyProposal}</p>
+                    </div>
+                  )}
+                  
+                  {problemAnalysis.isOffline && (
+                    <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded">
+                      <p className="text-yellow-400 font-mono text-sm flex items-center gap-2">
+                        ⚠️ AI_SERVICE_OFFLINE - Using cached analysis. Contact us for live consultation.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Key Metrics */}
