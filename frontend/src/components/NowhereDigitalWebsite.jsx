@@ -5,6 +5,8 @@ import MatrixChatSystem from './MatrixChatSystem';
 import PricingShowcase from './PricingShowcase';
 import MobileMatrixOptimizer, { MobileMatrixText } from './MobileMatrixOptimizer';
 import TerminalWindow from './TerminalWindow';
+import AIProblemSolver from './AIProblemSolver';
+import UltimatePlatformDashboard from './UltimatePlatformDashboard';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
