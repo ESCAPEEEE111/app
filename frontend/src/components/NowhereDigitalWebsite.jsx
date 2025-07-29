@@ -159,10 +159,12 @@ const NowhereDigitalWebsite = () => {
       <section id="home" className="pt-20 pb-16 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+            {/* Hero Content */}
             <div>
-              <div className="inline-flex items-center space-x-2 bg-matrix-green/10 backdrop-blur-sm border border-matrix-green/30 rounded-full px-4 py-2 mb-6">
-                <Zap className="w-4 h-4 text-matrix-green" />
-                <span className="text-sm text-matrix-green font-mono">#1_DIGITAL_MATRIX_DUBAI</span>
+              <div className="mb-8">
+                <Badge className="bg-matrix-cyan/20 text-matrix-cyan border-matrix-cyan/40 font-mono mb-4">
+                  🚀 #1 Digital Marketing Agency in Dubai
+                </Badge>
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-mono">
@@ -175,60 +177,85 @@ const NowhereDigitalWebsite = () => {
                 </MobileMatrixText>
               </h1>
               
-              <TerminalWindow title="MISSION_BRIEFING.txt" className="mb-8">
-                <p className="text-matrix-green/80 leading-relaxed">
-                  {terminalText}
-                  <span className="animate-pulse">|</span>
-                </p>
-                <p className="text-matrix-green/60 mt-2 text-sm">
-                  &gt; Leading Digital Marketing Agency in Dubai, UAE
-                  <br />
-                  &gt; Custom Web & App Development Solutions
-                  <br />
-                  &gt; AI Agents Integration & Lead Generation
-                  <br />
-                  &gt; UAE market domination protocols active
-                </p>
-              </TerminalWindow>
+              <p className="text-xl text-matrix-green/80 mb-8 max-w-2xl font-mono leading-relaxed">
+                Transform your business with AI-powered digital marketing solutions. 
+                <span className="text-matrix-cyan"> 500+ successful projects</span> in Dubai & UAE.
+              </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-matrix-green text-black hover:bg-matrix-green/80 px-8 py-4 rounded-full text-lg font-mono font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <span>JACK_IN</span>
-                  <ArrowRight className="w-5 h-5" />
+              {/* Enhanced CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button className="bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan text-black hover:from-matrix-bright-cyan hover:to-matrix-teal px-8 py-4 text-lg font-mono font-bold transition-all duration-300 transform hover:scale-105">
+                  <Rocket className="w-5 h-5 mr-2" />
+                  START YOUR PROJECT
                 </Button>
-                <Button variant="outline" className="border-matrix-green text-matrix-green hover:bg-matrix-green/10 px-8 py-4 rounded-full text-lg font-mono font-semibold transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Play className="w-5 h-5" />
-                  <span>VIEW_DEMO</span>
+                <Button variant="outline" className="border-matrix-cyan/40 text-matrix-cyan hover:bg-matrix-cyan/10 px-8 py-4 text-lg font-mono">
+                  <Play className="w-5 h-5 mr-2" />
+                  VIEW PORTFOLIO
                 </Button>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-4 gap-4 mt-12">
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center gap-6 text-sm font-mono text-matrix-green/60">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-matrix-cyan" />
+                  <span>Free Consultation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-matrix-cyan" />
+                  <span>24/7 Support</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-matrix-cyan" />
+                  <span>UAE Specialists</span>
+                </div>
+              </div>
+
+              {/* Enhanced Stats Section */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-matrix-green font-mono">{stat.number}</div>
-                    <div className="text-sm text-matrix-green/60 font-mono uppercase tracking-wider">{stat.label}</div>
+                    <div className="text-4xl font-bold text-matrix-cyan font-mono mb-2">{stat.number}</div>
+                    <div className="text-matrix-green/60 font-mono text-sm uppercase tracking-wider">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-matrix-green/5 rounded-3xl blur-3xl"></div>
-              <TerminalWindow title="SYSTEM_CAPABILITIES.exe" className="relative">
-                <div className="grid grid-cols-3 gap-4">
-                  {[Globe, Smartphone, Brain, BarChart3, Shield, Rocket].map((Icon, index) => (
-                    <div
-                      key={index}
-                      className="bg-matrix-green/10 border border-matrix-green/30 rounded-2xl p-6 flex items-center justify-center transform hover:scale-110 transition-all duration-300 hover:bg-matrix-green/20"
-                    >
-                      <Icon className="w-8 h-8 text-matrix-green" />
-                    </div>
-                  ))}
+            {/* Enhanced Terminal Windows */}
+            <div className="space-y-4">
+              <TerminalWindow title="MISSION_BRIEFING.txt" className="text-left">
+                <div className="font-mono text-matrix-green text-sm">
+                  <p className="text-matrix-cyan">&gt; Loading Digital Marketing Agency in Dubai, UAE</p>
+                  <p>&gt; Custom Web & App Development Solutions</p>
+                  <p>&gt; AI Agents Integration & Lead Generation</p>
+                  <p>&gt; UAE market domination protocols active</p>
+                  <p className="text-matrix-bright-cyan mt-2">&gt; STATUS: READY_FOR_DEPLOYMENT</p>
                 </div>
-                <div className="mt-8 text-center">
-                  <h3 className="text-xl font-semibold mb-2 font-mono text-matrix-green">AI_POWERED_SOLUTIONS</h3>
-                  <p className="text-matrix-green/60 font-mono text-sm">CUTTING_EDGE_TECHNOLOGY_MEETS_CREATIVE_EXCELLENCE</p>
+              </TerminalWindow>
+              
+              <TerminalWindow title="SYSTEM_CAPABILITIES.exe">
+                <div className="grid grid-cols-3 gap-4 p-4">
+                  {[
+                    { icon: Globe, label: "WEB_DEV" },
+                    { icon: Smartphone, label: "MOBILE" },
+                    { icon: Brain, label: "AI_POWERED" },
+                    { icon: BarChart3, label: "ANALYTICS" },
+                    { icon: Shield, label: "SECURITY" },
+                    { icon: Zap, label: "PERFORMANCE" }
+                  ].map((item, index) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <div key={index} className="text-center">
+                        <IconComponent className="w-8 h-8 text-matrix-cyan mx-auto mb-2" />
+                        <span className="text-xs text-matrix-green/80 font-mono">{item.label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="mt-4 text-center font-mono text-matrix-bright-cyan text-sm">
+                  AI_POWERED_SOLUTIONS
+                  <br />
+                  <span className="text-matrix-green/60">CUTTING_EDGE_TECHNOLOGY_MEETS_CREATIVE_EXCELLENCE</span>
                 </div>
               </TerminalWindow>
             </div>
