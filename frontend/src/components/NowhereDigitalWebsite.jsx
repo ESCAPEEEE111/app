@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Play, Phone, Mail, MapPin, Star, CheckCircle, Zap, Rocket, Globe, Smartphone, Brain, BarChart3, Shield, Search, ShoppingBag, Eye, Volume2, Calendar, Building, Plane, Heart, Home, Megaphone, Camera, MessageCircle } from 'lucide-react';
 import { services, specializedServices, testimonials, stats, partnerBrands, navigationItems, contactInfo } from '../data/mock';
-import MatrixRain from './MatrixRain';
-import MatrixParticles from './MatrixParticles';
-import MatrixWaves from './MatrixWaves';
-import MatrixInteractive from './MatrixInteractive';
 import MatrixChatSystem from './MatrixChatSystem';
 import MatrixAdvancedSections from './MatrixAdvancedSections';
 import AIContentGenerator from './AIContentGenerator';
