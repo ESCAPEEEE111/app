@@ -301,18 +301,13 @@ async def generate_content(
         # Generate content
         generated_content = await ai_service.generate_content(
             content_request.content_type,
-            content_request.prompt
+            content_request.description,
+            content_request.tone,
+            content_request.target_audience
         )
         
-        # Create content record
-        content_record = ContentGeneration(
-            user_id=content_request.user_id,
-            content_type=content_request.content_type,
-            prompt=content_request.prompt,
-            generated_content=generated_content
-        )
-        
-        # Save to database
+        # Store content generation record
+        content_record = ContentGeneration(**content_request.dict(), content=generated_content)
         await db.content_generation.insert_one(content_record.dict())
         
         return StandardResponse(
@@ -324,6 +319,58 @@ async def generate_content(
     except Exception as e:
         logger.error(f"Error generating content: {e}")
         raise HTTPException(status_code=500, detail="Failed to generate content")
+
+# AI Problem Analysis Endpoint
+@api_router.post("/ai/analyze-problem", response_model=StandardResponse)
+async def analyze_business_problem(
+    problem_data: Dict[str, Any]
+):
+    """Analyze business problem and provide AI-powered solutions"""
+    try:
+        problem_description = problem_data.get("problem_description", "")
+        industry = problem_data.get("industry", "general")
+        budget_range = problem_data.get("budget_range", "")
+        
+        # Generate comprehensive analysis using multiple AI capabilities
+        recommendations = await ai_service.generate_service_recommendations(
+            f"Industry: {industry}, Problem: {problem_description}, Budget: {budget_range}"
+        )
+        
+        # Get market trends for the industry
+        market_analysis = await ai_service.analyze_market_trends(industry)
+        
+        # Generate strategy proposal
+        business_info = {
+            "business_name": "Client Business",
+            "industry": industry,
+            "target_market": "UAE",
+            "challenges": problem_description,
+            "goals": "Solve the described problem",
+            "budget": budget_range
+        }
+        strategy_proposal = await ai_service.generate_strategy_proposal(business_info)
+        
+        return StandardResponse(
+            success=True,
+            message="Problem analysis completed successfully",
+            data={
+                "analysis": {
+                    "problem_description": problem_description,
+                    "industry": industry,
+                    "ai_analysis": recommendations,
+                    "market_insights": market_analysis,
+                    "strategy_proposal": strategy_proposal,
+                    "estimated_roi": "200-400%",
+                    "implementation_time": "2-8 weeks",
+                    "budget_range": budget_range or "AED 15,000 - 50,000/month",
+                    "priority_level": "HIGH"
+                }
+            }
+        )
+        
+    except Exception as e:
+        logger.error(f"Error analyzing business problem: {e}")
+        raise HTTPException(status_code=500, detail="Failed to analyze business problem")
 
 @api_router.get("/content/recommendations")
 async def get_service_recommendations(
