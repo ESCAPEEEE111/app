@@ -81,21 +81,67 @@ const AIProblemSolver = ({ className = "" }) => {
     
     setIsAnalyzing(true);
     
-    // Simulate AI analysis
-    setTimeout(() => {
+    // Get backend URL from environment
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8001";
+    
+    try {
+      // Call the backend API for AI analysis
+      const response = await fetch(`${backendUrl}/api/ai/analyze-problem`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          problem_description: userInput,
+          industry: selectedIndustry === 'all' ? 'general' : selectedIndustry,
+          budget_range: budgetRanges.find(b => b.id === selectedBudget)?.range || ''
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        const analysisData = result.data.analysis;
+        
+        const analysis = {
+          userProblem: userInput,
+          aiAnalysis: analysisData.ai_analysis,
+          marketInsights: analysisData.market_insights,
+          strategyProposal: analysisData.strategy_proposal,
+          recommendedSolutions: getRecommendedSolutions(userInput), // Keep existing logic for UI demos
+          estimatedROI: analysisData.estimated_roi,
+          implementationTime: analysisData.implementation_time,
+          budgetRange: analysisData.budget_range,
+          priorityLevel: analysisData.priority_level
+        };
+        
+        setProblemAnalysis(analysis);
+      } else {
+        throw new Error(result.message || 'Analysis failed');
+      }
+    } catch (error) {
+      console.error('Error analyzing problem:', error);
+      
+      // Fallback to mock analysis if API fails
       const analysis = {
         userProblem: userInput,
-        aiAnalysis: generateAIAnalysis(userInput),
+        aiAnalysis: `I'm experiencing connectivity issues with our AI analysis service. However, based on your input "${userInput}", this appears to be a significant digital transformation challenge that would benefit from our comprehensive AI-powered solutions.`,
         recommendedSolutions: getRecommendedSolutions(userInput),
         estimatedROI: "200-400%",
         implementationTime: "2-8 weeks",
         budgetRange: "AED 15,000 - 50,000/month",
-        priorityLevel: "HIGH"
+        priorityLevel: "HIGH",
+        isOffline: true
       };
       
       setProblemAnalysis(analysis);
+    } finally {
       setIsAnalyzing(false);
-    }, 2000);
+    }
   };
 
   const generateAIAnalysis = (input) => {
