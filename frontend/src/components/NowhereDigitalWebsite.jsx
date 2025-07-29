@@ -167,11 +167,11 @@ const NowhereDigitalWebsite = () => {
               
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-mono">
                 <MobileMatrixText>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan animate-pulse matrix-text-glow">
+                  <span className="text-matrix-cyan">
                     DIGITAL
                   </span>
                   <br />
-                  <span className="text-white matrix-flicker">SUPREMACY</span>
+                  <span className="text-white">SUPREMACY</span>
                 </MobileMatrixText>
               </h1>
               
