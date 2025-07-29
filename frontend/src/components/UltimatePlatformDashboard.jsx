@@ -69,7 +69,7 @@ const UltimatePlatformDashboard = ({ className = "" }) => {
     {
       id: 'IMMERSIVE_EXPERIENCES',
       name: 'Metaverse & AR/VR',
-      icon: VrHeadset,
+      icon: Headset,
       color: 'from-indigo-500 to-purple-500',
       description: 'Immersive technology solutions',
       features: ['AR/VR Apps', 'Metaverse Presence', 'Virtual Showrooms']
