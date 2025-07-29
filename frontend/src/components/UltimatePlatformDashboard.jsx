@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Brain, Zap, Globe, ShoppingCart, VrHeadset, BarChart3, 
+  Brain, Zap, Globe, ShoppingCart, Headset, BarChart3, 
   Rocket, Star, ArrowRight, CheckCircle, Settings, 
   TrendingUp, Users, DollarSign, Clock, Shield, 
   Smartphone, Cloud, Database, Cpu, Network, Lock
