@@ -154,17 +154,13 @@ const MatrixChatSystem = () => {
   };
 
   return (
-    <div className="fixed bottom-0 right-0 z-[9999] p-4 pointer-events-none">
+    <div className="fixed bottom-6 right-6 z-[9999] pointer-events-none">
       {/* Chat Toggle Button */}
       {!isOpen && (
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto animate-fadeInRight">
           <Button
             onClick={() => setIsOpen(true)}
-            className="w-16 h-16 rounded-full bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan text-black hover:from-matrix-bright-cyan hover:to-matrix-cyan shadow-2xl transform hover:scale-110 transition-all duration-300"
-            style={{ 
-              boxShadow: '0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.3)',
-              animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-            }}
+            className="w-16 h-16 rounded-full bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan text-black hover:from-matrix-bright-cyan hover:to-matrix-cyan shadow-matrix-xl transform hover:scale-110 transition-all duration-300 animate-pulse-glow hover-lift"
           >
             <MessageCircle className="w-8 h-8" />
           </Button>
@@ -172,11 +168,11 @@ const MatrixChatSystem = () => {
           {/* Notification pulse */}
           <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full animate-ping" />
           <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-            <span className="text-white text-xs font-bold">AI</span>
+            <span className="text-white text-xs font-bold font-body">AI</span>
           </div>
           
           {/* Tooltip */}
-          <div className="absolute bottom-20 right-0 bg-black/90 text-matrix-green px-3 py-2 rounded-lg font-mono text-sm whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <div className="absolute bottom-20 right-0 bg-black/90 text-matrix-green px-3 py-2 rounded-lg font-body text-sm whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Chat with AI Assistant
             <div className="absolute top-full right-4 border-4 border-transparent border-t-black/90"></div>
           </div>
@@ -185,21 +181,16 @@ const MatrixChatSystem = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto animate-scaleIn">
           <Card 
-            className={`bg-black/95 border-matrix-green backdrop-blur-xl transition-all duration-300 shadow-2xl ${
+            className={`modern-card backdrop-blur-xl transition-all duration-300 shadow-matrix-xl hover-glow ${
               isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'
             }`}
-            style={{ 
-              boxShadow: '0 0 40px rgba(0, 255, 65, 0.4), 0 0 80px rgba(0, 255, 65, 0.2)',
-              border: '2px solid #00FF41',
-              borderRadius: '12px'
-            }}
           >
             {/* Chat Header */}
-            <CardHeader className="p-4 border-b border-matrix-green/30 bg-gradient-to-r from-black/80 to-matrix-green/10 rounded-t-[10px]">
+            <CardHeader className="p-4 border-b border-matrix-green/30 bg-matrix-gradient rounded-t-[11px]">
               <div className="flex items-center justify-between">
-                <CardTitle className="text-matrix-green font-mono flex items-center gap-2">
+                <CardTitle className="text-matrix-green font-heading flex items-center gap-2">
                   <Bot className="w-5 h-5 animate-pulse text-matrix-bright-cyan" />
                   <span className="matrix-text-glow">AI_AGENT_ONLINE</span>
                   <div className="w-2 h-2 bg-matrix-bright-cyan rounded-full animate-pulse"></div>
@@ -209,7 +200,7 @@ const MatrixChatSystem = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsMinimized(!isMinimized)}
-                    className="text-matrix-green hover:bg-matrix-green/20 p-2 rounded-full transition-colors"
+                    className="text-matrix-green hover:bg-matrix-green/20 p-2 rounded-full transition-colors hover-scale"
                   >
                     {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                   </Button>
@@ -217,7 +208,7 @@ const MatrixChatSystem = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsOpen(false)}
-                    className="text-matrix-green hover:bg-red-500/20 hover:text-red-400 p-2 rounded-full transition-colors"
+                    className="text-matrix-green hover:bg-red-500/20 hover:text-red-400 p-2 rounded-full transition-colors hover-scale"
                   >
                     <X className="w-4 h-4" />
                   </Button>
@@ -229,28 +220,29 @@ const MatrixChatSystem = () => {
             {!isMinimized && (
               <CardContent className="p-0 flex flex-col h-[500px]">
                 {/* Messages Area */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-black/60 to-black/80 custom-scrollbar">
-                  {messages.map((message) => (
+                <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-matrix-gradient-dark">
+                  {messages.map((message, index) => (
                     <div
                       key={message.id}
-                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'} animate-fadeIn`}
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'} animate-fadeInUp`}
+                      style={{animationDelay: `${index * 0.1}s`}}
                     >
                       <div className={`max-w-[85%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                         <div
-                          className={`p-3 rounded-lg font-mono text-sm leading-relaxed transition-all duration-300 ${
+                          className={`p-3 rounded-lg font-body text-sm leading-relaxed transition-all duration-300 hover-lift ${
                             message.type === 'user'
                               ? 'bg-gradient-to-r from-matrix-green/30 to-matrix-cyan/20 text-white border border-matrix-green/50 rounded-br-none'
                               : 'bg-gradient-to-r from-black/90 to-matrix-green/10 text-matrix-green border border-matrix-green/30 rounded-bl-none'
-                          } ${message.typing ? 'animate-pulse' : ''}`}
+                          } ${message.typing ? 'animate-matrix-loading' : ''}`}
                         >
                           <div className="flex items-start gap-2 mb-2">
                             {message.type === 'bot' ? (
-                              <Bot className="w-4 h-4 text-matrix-bright-cyan mt-0.5" />
+                              <Bot className="w-4 h-4 text-matrix-bright-cyan mt-0.5 animate-float" />
                             ) : (
                               <User className="w-4 h-4 text-matrix-green mt-0.5" />
                             )}
                             <div className="flex-1">
-                              <div className="text-xs opacity-60 mb-1">
+                              <div className="text-xs opacity-60 mb-1 font-mono">
                                 {message.type === 'bot' ? 'AI_ASSISTANT' : 'YOU'} • {formatTime(message.timestamp)}
                               </div>
                               <div className="whitespace-pre-wrap break-words">
@@ -274,7 +266,7 @@ const MatrixChatSystem = () => {
                         <button
                           key={index}
                           onClick={() => handleQuickReply(reply)}
-                          className="px-2 py-1 text-xs bg-matrix-green/10 border border-matrix-green/30 text-matrix-green hover:bg-matrix-green/20 rounded font-mono transition-colors"
+                          className="px-2 py-1 text-xs bg-matrix-green/10 border border-matrix-green/30 text-matrix-green hover:bg-matrix-green/20 rounded font-body transition-colors hover-scale"
                         >
                           {reply}
                         </button>
@@ -284,7 +276,7 @@ const MatrixChatSystem = () => {
                 )}
 
                 {/* Input Area */}
-                <div className="p-4 border-t border-matrix-green/30 bg-gradient-to-r from-black/80 to-matrix-green/5">
+                <div className="p-4 border-t border-matrix-green/30 bg-matrix-gradient">
                   <div className="flex gap-2">
                     <textarea
                       ref={chatInputRef}
@@ -292,14 +284,14 @@ const MatrixChatSystem = () => {
                       onChange={(e) => setInputMessage(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Type your message..."
-                      className="flex-1 bg-black/60 border border-matrix-green/40 rounded-lg px-3 py-2 text-matrix-green placeholder-matrix-green/50 font-mono text-sm focus:outline-none focus:border-matrix-bright-cyan focus:ring-1 focus:ring-matrix-bright-cyan/30 resize-none transition-all"
+                      className="flex-1 bg-black/60 border border-matrix-green/40 rounded-lg px-3 py-2 text-matrix-green placeholder-matrix-green/50 font-body text-sm focus:outline-none focus:border-matrix-bright-cyan focus:ring-1 focus:ring-matrix-bright-cyan/30 resize-none transition-all hover-glow"
                       rows={1}
                       disabled={isTyping}
                     />
                     <Button
                       onClick={sendMessage}
                       disabled={!inputMessage.trim() || isTyping}
-                      className="bg-gradient-to-r from-matrix-green to-matrix-cyan text-black hover:from-matrix-cyan hover:to-matrix-bright-cyan disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg transition-all"
+                      className="btn-matrix hover-lift disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg"
                     >
                       <Send className="w-4 h-4" />
                     </Button>
@@ -313,27 +305,6 @@ const MatrixChatSystem = () => {
           </Card>
         </div>
       )}
-      
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(0, 0, 0, 0.3);
-          border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(0, 255, 65, 0.3);
-          border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(0, 255, 65, 0.5);
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </div>
   );
 };
