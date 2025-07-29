@@ -239,12 +239,6 @@ const NowhereDigitalWebsite = () => {
         </div>
       </section>
 
-      {/* Pricing Showcase */}
-      <PricingShowcase />
-
-      {/* Services Pricing Section */}
-      <ServicesPricingSection />
-
       {/* Services Section */}
       <section id="services" className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,88 +286,42 @@ const NowhereDigitalWebsite = () => {
               );
             })}
           </div>
-        </div>
-      </section>
 
-      {/* Specialized Services */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-mono">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan matrix-text-glow">
-                UAE_MARKET_SPECIALISTS
-              </span>
-            </h2>
-          </div>
+          {/* Specialized Services Subsection */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl lg:text-4xl font-bold mb-4 font-mono">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-matrix-cyan to-matrix-bright-cyan matrix-text-glow">
+                  UAE_MARKET_SPECIALISTS
+                </span>
+              </h3>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {specializedServices.map((service, index) => {
-              const IconComponent = iconMap[service.icon];
-              return (
-                <Card
-                  key={service.id}
-                  className="bg-black/30 border-matrix-green/20 hover:border-matrix-green/40 transition-all duration-300 text-center group backdrop-blur-sm"
-                >
-                  <CardHeader>
-                    <div className="text-matrix-green mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                      {IconComponent && <IconComponent className="w-8 h-8" />}
-                    </div>
-                    <CardTitle className="text-lg font-mono text-matrix-green">{service.title}</CardTitle>
-                    <CardDescription className="text-matrix-green/60 text-sm font-mono">{service.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              );
-            })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {specializedServices.map((service, index) => {
+                const IconComponent = iconMap[service.icon];
+                return (
+                  <Card
+                    key={service.id}
+                    className="bg-black/30 border-matrix-green/20 hover:border-matrix-green/40 transition-all duration-300 text-center group backdrop-blur-sm"
+                  >
+                    <CardHeader>
+                      <div className="text-matrix-green mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                        {IconComponent && <IconComponent className="w-8 h-8" />}
+                      </div>
+                      <CardTitle className="text-lg font-mono text-matrix-green">{service.title}</CardTitle>
+                      <CardDescription className="text-matrix-green/60 text-sm font-mono">{service.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Partner Brands */}
-      <section className="py-20 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-mono">
-              <span className="text-matrix-green">
-                TRUSTED_PARTNERS
-              </span>
-            </h2>
-            <p className="text-xl text-matrix-green/80 font-mono">STRATEGIC_ALLIANCES_FOR_DIGITAL_DOMINANCE</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {partnerBrands.map((brand, index) => (
-              <Card
-                key={brand.id}
-                className="bg-black/50 border border-matrix-green/20 hover:border-matrix-green/40 backdrop-blur-sm rounded-lg transition-all duration-300 text-center transform hover:scale-105 hover:bg-matrix-green/5 group"
-              >
-                <CardHeader className="pb-2">
-                  <div className="text-4xl mb-2">{brand.logo}</div>
-                  <CardTitle className="text-matrix-green font-mono text-lg group-hover:text-white transition-colors duration-300">
-                    {brand.name}
-                  </CardTitle>
-                  <Badge variant="outline" className="border-matrix-green/40 text-matrix-green/70 font-mono text-xs">
-                    {brand.category}
-                  </Badge>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-matrix-green/60 text-sm font-mono">{brand.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <TerminalWindow title="PARTNERSHIP_STATUS.log" className="max-w-2xl mx-auto">
-              <div className="font-mono text-matrix-green/80">
-                <p>&gt; STRATEGIC_PARTNERSHIPS: [ACTIVE]</p>
-                <p>&gt; INTEGRATION_LEVEL: [ENTERPRISE]</p>
-                <p>&gt; PARTNERSHIP_BENEFITS: [UNLIMITED_ACCESS]</p>
-                <p className="text-matrix-green mt-2">&gt; STATUS: READY_FOR_DEPLOYMENT</p>
-              </div>
-            </TerminalWindow>
-          </div>
-        </div>
-      </section>
+      {/* Pricing Showcase */}
+      <PricingShowcase />
 
       {/* Testimonials */}
       <section className="py-20 relative z-10">
