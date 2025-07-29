@@ -27,18 +27,14 @@ const MobileMatrixOptimizer = ({ children, className = "" }) => {
     };
   }, []);
 
-  // Mobile-specific Matrix effects optimization
+  // Mobile-specific optimization without heavy animations
   useEffect(() => {
     if (isMobile) {
-      // Reduce animation intensity on mobile for performance
-      document.documentElement.style.setProperty('--matrix-animation-speed', '0.5s');
-      document.documentElement.style.setProperty('--matrix-particle-count', '30');
-      document.documentElement.style.setProperty('--matrix-effects-opacity', '0.6');
+      // Minimal effects on mobile for performance
+      document.documentElement.style.setProperty('--matrix-effects-opacity', '0.3');
     } else {
-      // Full effects on desktop
-      document.documentElement.style.setProperty('--matrix-animation-speed', '1s');
-      document.documentElement.style.setProperty('--matrix-particle-count', '100');
-      document.documentElement.style.setProperty('--matrix-effects-opacity', '0.8');
+      // Reduced effects on desktop
+      document.documentElement.style.setProperty('--matrix-effects-opacity', '0.5');
     }
   }, [isMobile]);
 
