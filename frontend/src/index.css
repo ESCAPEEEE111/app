@@ -402,23 +402,7 @@ code {
   transition: all 0.3s ease;
 }
 
-/* Scrollbar customization for Matrix theme */
-::-webkit-scrollbar {
-  width: 8px;
-}
 
-::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #00FFFF;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #00E5FF;
-}
 
 /* Additional Matrix Theme Custom Animations */
 @keyframes matrix-scan {
