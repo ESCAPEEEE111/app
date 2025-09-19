@@ -150,7 +150,7 @@ class DubaiBusinessTester:
                 "name": "Fatima Al-Zahra",
                 "email": "fatima.alzahra@dubaitech.ae",
                 "phone": "+971504567890",
-                "service": "digital_marketing",
+                "service": "content_marketing",
                 "message": "We are a Dubai-based fintech startup looking for comprehensive digital marketing services to establish our brand in the UAE market. We need help with social media, content marketing, and lead generation strategies."
             }
             
