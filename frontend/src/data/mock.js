@@ -543,6 +543,6 @@ export const navigationItems = [
 
 export const contactInfo = {
   phone: "+971567148469",
-  email: "hello@nowheredigital.ae",
-  address: "Dubai, United Arab Emirates"
+  email: "info@nowheredigitalmediai.agency",
+  address: "Boulevard Tower, Downtown Dubai"
 };
