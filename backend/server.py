@@ -704,18 +704,18 @@ async def get_analytics_summary():
 # Include the API router
 app.include_router(api_router)
 
-# Startup and shutdown events
-@app.on_event("startup")
-async def startup_event():
-    """Initialize database connection on startup"""
-    await connect_to_db()
-    logger.info("NOWHERE Digital API started successfully")
+# Startup and shutdown events (temporarily disabled for setup)
+# @app.on_event("startup")
+# async def startup_event():
+#     """Initialize database connection on startup"""
+#     await connect_to_db()
+#     logger.info("NOWHERE Digital API started successfully")
 
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Close database connection on shutdown"""
-    await close_db_connection()
-    logger.info("NOWHERE Digital API shutdown")
+# @app.on_event("shutdown")
+# async def shutdown_event():
+#     """Close database connection on shutdown"""
+#     await close_db_connection()
+#     logger.info("NOWHERE Digital API shutdown")
 
 # Root endpoint
 @app.get("/")
@@ -733,4 +733,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host=settings.host, port=settings.port)

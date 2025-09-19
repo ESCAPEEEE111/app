@@ -1,4 +1,3 @@
-from emergentintegrations.llm.chat import LlmChat, UserMessage
 from config import settings
 import logging
 from typing import Dict, Any, Optional
@@ -12,8 +11,8 @@ class AIService:
         self.model = settings.default_ai_model
         self.provider = settings.ai_provider
         
-    async def create_chat_session(self, session_id: str, system_message: str = None) -> LlmChat:
-        """Create a new chat session"""
+    async def create_chat_session(self, session_id: str, system_message: str = None) -> dict:
+        """Create a new chat session (mocked for now)"""
         if not system_message:
             system_message = """You are a helpful AI assistant for NOWHERE Digital, a leading digital marketing agency in Dubai, UAE. 
             
@@ -33,15 +32,14 @@ class AIService:
             If users ask about services, pricing, or want to book a consultation, guide them to use the booking system or contact form."""
         
         try:
-            chat = LlmChat(
-                api_key=self.api_key,
-                session_id=session_id,
-                system_message=system_message
-            )
-            
-            # Configure the model
-            chat.with_model(self.provider, self.model)
-            chat.with_max_tokens(2048)
+            # Mock chat session for now
+            chat = {
+                "session_id": session_id,
+                "system_message": system_message,
+                "api_key": self.api_key,
+                "model": self.model,
+                "provider": self.provider
+            }
             
             return chat
             
@@ -50,12 +48,11 @@ class AIService:
             raise
 
     async def send_chat_message(self, session_id: str, message: str) -> str:
-        """Send a message to the AI chat and get response"""
+        """Send a message to the AI chat and get response (mocked for now)"""
         try:
             chat = await self.create_chat_session(session_id)
-            user_message = UserMessage(text=message)
-            
-            response = await chat.send_message(user_message)
+            # Mock AI response for now
+            response = f"Thank you for your message: '{message}'. I'm currently being set up and will provide full AI responses soon. In the meantime, please feel free to use our contact form or booking system to get in touch with our team at NOWHERE Digital."
             return response
             
         except Exception as e:
@@ -96,8 +93,8 @@ class AIService:
             session_id = f"content_generation_{content_type}"
             chat = await self.create_chat_session(session_id, system_message)
             
-            user_message = UserMessage(text=prompt)
-            response = await chat.send_message(user_message)
+            # Mock content generation for now
+            response = f"Generated {content_type} content for: '{prompt}'. Full AI content generation will be available once OpenAI integration is configured."
             
             return response
             
@@ -130,8 +127,8 @@ class AIService:
             session_id = "service_recommendations"
             chat = await self.create_chat_session(session_id, system_message)
             
-            user_message = UserMessage(text=user_input)
-            response = await chat.send_message(user_message)
+            # Mock service recommendations for now
+            response = f"Based on your input: '{user_input}', we recommend our comprehensive digital marketing services including Social Media Marketing, Web Development, and SEO. Please contact us for a detailed consultation."
             
             return response
             
@@ -157,9 +154,8 @@ class AIService:
             session_id = f"market_analysis_{industry}"
             chat = await self.create_chat_session(session_id, system_message)
             
-            prompt = f"Analyze the current digital marketing trends and opportunities for {industry} businesses in {location}."
-            user_message = UserMessage(text=prompt)
-            response = await chat.send_message(user_message)
+            # Mock market analysis for now
+            response = f"Market analysis for {industry} in {location}: Growing digital transformation opportunities with strong mobile and social media adoption. Contact us for detailed market insights."
             
             return response
             
@@ -186,17 +182,10 @@ class AIService:
             session_id = "strategy_proposal"
             chat = await self.create_chat_session(session_id, system_message)
             
-            prompt = f"""Create a digital marketing strategy proposal for:
-            Business: {business_info.get('business_name', 'Not specified')}
-            Industry: {business_info.get('industry', 'Not specified')}
-            Target Market: {business_info.get('target_market', 'UAE')}
-            Current Challenges: {business_info.get('challenges', 'Not specified')}
-            Goals: {business_info.get('goals', 'Not specified')}
-            Budget Range: {business_info.get('budget', 'Not specified')}
-            """
-            
-            user_message = UserMessage(text=prompt)
-            response = await chat.send_message(user_message)
+            # Mock strategy proposal for now
+            business_name = business_info.get('business_name', 'Your Business')
+            industry = business_info.get('industry', 'Not specified')
+            response = f"Digital Marketing Strategy Proposal for {business_name} ({industry}): We recommend a comprehensive approach including social media marketing, SEO optimization, and lead generation tailored for the UAE market. Contact us for a detailed proposal."
             
             return response
             
