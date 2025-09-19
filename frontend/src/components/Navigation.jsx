@@ -44,7 +44,7 @@ const Navigation = () => {
               🌐 NOWHERE
             </div>
             <div className="text-sm font-body text-matrix-green/60 group-hover:text-matrix-cyan/80 transition-colors">
-              DIGITAL_MATRIX
+              DIGITAL_MEDIA
             </div>
           </Link>
 
