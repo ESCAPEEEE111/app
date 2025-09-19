@@ -542,7 +542,7 @@ export const navigationItems = [
 ];
 
 export const contactInfo = {
-  phone: "+971 50 XXX XXXX",
+  phone: "+971567148469",
   email: "hello@nowheredigital.ae",
   address: "Dubai, United Arab Emirates"
 };
