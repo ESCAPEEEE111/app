@@ -6,6 +6,11 @@ class Settings(BaseSettings):
     # Database
     mongo_url: str = os.getenv("MONGO_URL", "mongodb://localhost:27017")
     db_name: str = os.getenv("DB_NAME", "nowhere_digital")
+    database_url: str = os.getenv("DATABASE_URL", "postgresql://postgres:password@helium/heliumdb?sslmode=disable")
+    
+    # Server Configuration
+    host: str = os.getenv("HOST", "127.0.0.1")
+    port: int = int(os.getenv("PORT", "8000"))
     
     # Email Settings
     sendgrid_api_key: str = os.getenv("SENDGRID_API_KEY", "")
@@ -25,7 +30,10 @@ class Settings(BaseSettings):
     # CORS
     cors_origins: List[str] = [
         "http://localhost:3000",
-        "https://onestop-digital.preview.emergentagent.com"
+        "http://localhost:5000",
+        "https://9c09564c-7a6e-407e-b8d2-68ca0b1c68e5-00-2pvby8ydlfies.sisko.replit.dev",
+        "https://onestop-digital.preview.emergentagent.com",
+        "*"  # Allow all origins for development
     ]
     
     # API Settings
